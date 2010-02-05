@@ -5,6 +5,7 @@ class SipaccountsController < ApplicationController
 	before_filter :login_required, :only => ['index']
 	
 	def index
+		logger.info "starting sipaccounts"
 		begin
 			@SIPAccounts = SIPAccount.new.all( session[:authID] )
 		rescue

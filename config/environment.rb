@@ -41,10 +41,4 @@ Rails::Initializer.run do |config|
   
   config.action_controller.session_store = :active_record_store
   
-  
-  if "irb" == $0
-	  ActiveRecord::Base.logger = Logger.new(STDOUT)
-  end
-  
-  
 end

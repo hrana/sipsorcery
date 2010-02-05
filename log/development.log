@@ -2152,3 +2152,53 @@ Processing SipaccountsController#index (for 127.0.0.1 at 2010-02-05 11:50:17) [G
 Rendering template within layouts/application
 Rendering sipaccounts/index
 Completed in 1365ms (View: 17, DB: 1) | 200 OK [http://localhost/sipaccounts]
+
+
+Processing AuthController#logout (for 127.0.0.1 at 2010-02-05 12:13:49) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"auth"}
+Redirected to http://localhost:3000/auth/login
+Completed in 115ms (DB: 0) | 302 Found [http://localhost/auth/logout]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2010-02-05 12:13:49) [GET]
+  Parameters: {"action"=>"login", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 34ms (View: 30, DB: 1) | 200 OK [http://localhost/auth/login]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2010-02-05 12:13:55) [POST]
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "login"=>"aaron"}, "commit"=>"Submit", "action"=>"login", "authenticity_token"=>"pT8e3FDq1BI7dBTToFsRgSLyYsVI1LmX9M3iflVtHzQ=", "controller"=>"auth"}
+login successful, authID=52163b52b89dd873b1ed3b164fee7ecd7238389a9b0d0cc77f19d3e61aabc7a589b5f19c008775720b8d41f48c1bd95d
+redirecting from auth to sipaccounts
+Redirected to http://localhost:3000/sipaccounts
+Completed in 5421ms (DB: 1) | 302 Found [http://localhost/auth/login]
+
+
+Processing SipaccountsController#index (for 127.0.0.1 at 2010-02-05 12:14:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"sipaccounts"}
+login required, authID=52163b52b89dd873b1ed3b164fee7ecd7238389a9b0d0cc77f19d3e61aabc7a589b5f19c008775720b8d41f48c1bd95d
+starting sipaccounts
+Rendering template within layouts/application
+Rendering sipaccounts/index
+Completed in 1375ms (View: 18, DB: 1) | 200 OK [http://localhost/sipaccounts]
+
+
+Processing AuthController#logout (for 127.0.0.1 at 2010-02-05 12:14:24) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"auth"}
+Redirected to http://localhost:3000/auth/login
+Completed in 5ms (DB: 1) | 302 Found [http://localhost/auth/logout]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2010-02-05 12:14:25) [GET]
+  Parameters: {"action"=>"login", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/auth/login]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2010-02-05 12:14:35) [POST]
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "login"=>""}, "commit"=>"Submit", "action"=>"login", "authenticity_token"=>"pT8e3FDq1BI7dBTToFsRgSLyYsVI1LmX9M3iflVtHzQ=", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 1185ms (View: 5, DB: 1) | 200 OK [http://localhost/auth/login]
