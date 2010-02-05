@@ -14,6 +14,7 @@ class AuthController < ApplicationController
 			doc = REXML::Document.new(resp)
 			if doc != nil && doc.elements[1] != nil
 				session[:authID] = doc.elements[1].text
+				puts "login successful, authID=#{session[:authID]}"
 			end
 		
 			if session[:authID] != nil

@@ -2086,3 +2086,69 @@ Processing SipaccountsController#index (for 127.0.0.1 at 2010-02-05 04:36:21) [G
 Rendering template within layouts/application
 Rendering sipaccounts/index
 Completed in 1376ms (View: 18, DB: 1) | 200 OK [http://localhost/sipaccounts]
+
+
+Processing SipaccountsController#index (for 127.0.0.1 at 2010-02-05 11:37:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"sipaccounts"}
+
+HTTPClient::BadResponseError (unexpected response: #<HTTP::Message::Headers:0x6e9ddb4 @body_charset=nil, @request_via_proxy=nil, @header_item=[["Date", "Fri, 05 Feb 2010 11:37:34 GMT"], ["Server", "Microsoft-IIS/6.0"], ["X-Powered-By", "ASP.NET"], ["X-AspNet-Version", "2.0.50727"], ["Cache-Control", "private"], ["Content-Type", "text/html"], ["Content-Length", "2307"]], @body_type=nil, @request_query=nil, @http_version="1.1", @is_request=false, @reason_phrase="Bad Request", @request_uri=nil, @request_method=nil, @chunked=false, @body_date=nil, @status_code=400, @dumped=false, @body_size=0>):
+  httpclient (2.1.5.2) lib/httpclient.rb:840:in `follow_redirect'
+  httpclient (2.1.5.2) lib/httpclient.rb:519:in `get_content'
+  app/models/SIPAccount.rb:9:in `all'
+  app/controllers/sipaccounts_controller.rb:8:in `index'
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SipaccountsController#index (for 127.0.0.1 at 2010-02-05 11:43:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"sipaccounts"}
+Redirected to http://localhost:3000/auth/login
+Completed in 1295ms (DB: 2) | 302 Found [http://localhost/sipaccounts]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2010-02-05 11:43:42) [GET]
+  Parameters: {"action"=>"login", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 36ms (View: 33, DB: 1) | 200 OK [http://localhost/auth/login]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2010-02-05 11:45:52) [POST]
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "login"=>"aaron"}, "commit"=>"Submit", "action"=>"login", "authenticity_token"=>"pT8e3FDq1BI7dBTToFsRgSLyYsVI1LmX9M3iflVtHzQ=", "controller"=>"auth"}
+Redirected to http://localhost:3000/sipaccounts
+Completed in 1423ms (DB: 1) | 302 Found [http://localhost/auth/login]
+
+
+Processing SipaccountsController#index (for 127.0.0.1 at 2010-02-05 11:45:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"sipaccounts"}
+Rendering template within layouts/application
+Rendering sipaccounts/index
+Completed in 1357ms (View: 18, DB: 1) | 200 OK [http://localhost/sipaccounts]
+
+
+Processing AuthController#logout (for 127.0.0.1 at 2010-02-05 11:50:05) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"auth"}
+Redirected to http://localhost:3000/auth/login
+Completed in 112ms (DB: 0) | 302 Found [http://localhost/auth/logout]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2010-02-05 11:50:05) [GET]
+  Parameters: {"action"=>"login", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 34ms (View: 31, DB: 1) | 200 OK [http://localhost/auth/login]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2010-02-05 11:50:12) [POST]
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "login"=>"aaron"}, "commit"=>"Submit", "action"=>"login", "authenticity_token"=>"pT8e3FDq1BI7dBTToFsRgSLyYsVI1LmX9M3iflVtHzQ=", "controller"=>"auth"}
+Redirected to http://localhost:3000/sipaccounts
+Completed in 4737ms (DB: 1) | 302 Found [http://localhost/auth/login]
+
+
+Processing SipaccountsController#index (for 127.0.0.1 at 2010-02-05 11:50:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"sipaccounts"}
+Rendering template within layouts/application
+Rendering sipaccounts/index
+Completed in 1365ms (View: 17, DB: 1) | 200 OK [http://localhost/sipaccounts]
