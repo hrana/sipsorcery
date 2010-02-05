@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password
   
   def login_required
-	  logger.info "login required, authID=#{session[:authID]}"
 	  if session[:authID]
 		  return true
 	  end
