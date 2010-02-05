@@ -1,0 +1,20 @@
+<%= link_to 'logout',  :controller => "auth", :action => 'logout' %> 
+
+<h1>Listing SIP Accounts</h1>
+
+<table>
+  <tr>
+	<th>ID</th>
+    <th>SIP Username</th>
+	<th>SIP Domain</th>
+  </tr>
+
+	<% @SIPAccounts.each do |sipAccount| %>
+		<tr>
+			<td><%=h sipAccount["Id"] %></td>
+			<td><%=h sipAccount["SIPUsername"] %></td>
+			<td><%=h sipAccount["SIPDomain"] %></td>
+		</tr>
+	<% end %>
+	
+</table>

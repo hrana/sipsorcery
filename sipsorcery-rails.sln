@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{325B8569-0C7C-4A6A-8AF8-89C3B6BC9E74}") = "sipsorcery-rails", "sipsorcery-rails.stproj", "{B470BB63-76BC-47B2-8257-3AA3621FC753}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B470BB63-76BC-47B2-8257-3AA3621FC753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B470BB63-76BC-47B2-8257-3AA3621FC753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B470BB63-76BC-47B2-8257-3AA3621FC753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B470BB63-76BC-47B2-8257-3AA3621FC753}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
